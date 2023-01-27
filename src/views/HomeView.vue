@@ -8,6 +8,11 @@ export default {
   components: {
     Home,
   },
+  mounted(){
+    this.$store.dispatch('getProductAPI');
+    this.$store.dispatch('getCartsFromStorage');
+  }
+ 
 };
 </script>
 

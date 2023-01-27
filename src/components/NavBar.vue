@@ -1,15 +1,36 @@
 <template>
   <div>
-    <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <nav
+      class="
+        navbar navbar-expand navbar-dark
+        bg-dark
+        fixed-top
+        bg-body-tertiary
+      "
+    >
       <div class="container">
         <ul class="nav navbar-nav">
           <li class="nav-item active">
             <router-link class="nav-link" to="/">Home</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/yourproducts">Product</router-link>
+            <router-link class="nav-link" to="/yourproducts"
+              >My Orders</router-link
+            >
           </li>
         </ul>
+        <div class="d-flex">
+        <select
+          class="form-select form-select-sm me-2"
+          style="width:300px"
+          aria-label=".form-select-sm example"
+        >
+          <option selected>All</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+
         <div class="dropdown">
           <button
             class="btn btn-secondary dropdown-toggle"
@@ -24,6 +45,7 @@
           </div>
         </div>
       </div>
+      </div>
     </nav>
   </div>
 </template>
@@ -36,7 +58,7 @@ export default {
     MiniCart,
   },
   computed: {
-    ...mapGetters(["getCartCount"]),
+    ...mapGetters(["getCartCount","getProducts"]),
   },
 };
 </script>

@@ -1,11 +1,13 @@
 <template>
-  <div class="row d-flex align-items-stretch flex-wrap mx-2">
+  <div class="container mt-5">
+  <div class=" row d-flex align-items-stretch flex-wrap mx-2">
     <productCart
       v-for="product in getProducts"
       :key="product.id"
       :product="product"
     />
   </div>
+</div>
 </template> 
 
 <script>

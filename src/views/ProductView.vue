@@ -1,10 +1,10 @@
 <template>
-  <div class="container">
+  <div class="container mt-5">
     <div class="row justify-content-center">
       <div class="col-8 justify-content-center mt-5">
         <div class="row">
           <div class="col-4">
-            <img src="@/assets/logo.png" />
+            <img :src="product[0].image" class="img-fluid"/>
           </div>
           <div class="col-8 text-left">
             <h1>{{ product[0].title }}</h1>
@@ -13,10 +13,10 @@
             </p>
             <strong class="mt-3">${{ product[0].price }}</strong>
             <form class="mt-3">
-              <label class="form-label">Quantity</label>
+              <label class="form-label fw-bolder">Quantity</label>
               <input
-                type="text"
-                class="form-control"
+                type="number"
+                class="form-control fw-bold"
                 style="width: 50px"
                 v-model.number="quantity"
               />
@@ -49,7 +49,7 @@ export default {
   data() {
     return {
       quantity: 1,
-      product: {},
+      product: null,
     };
   },
   beforeMount() {
