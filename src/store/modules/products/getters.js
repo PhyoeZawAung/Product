@@ -6,3 +6,11 @@ export const getProducts = state => {
     return state.products;
 }
 
+// export const getProductsaCategory = state =>{
+//     let categories = [];
+    
+//         state.products.forEach(product => {
+//             if(categories.length ==0 )
+//         });
+  
+// }
